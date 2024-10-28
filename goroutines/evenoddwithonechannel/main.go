@@ -15,7 +15,6 @@ func main() {
 	go printEven(signalCh, &wg, printTill)
 	go printOdd(signalCh, &wg, printTill)
 	wg.Wait()
-
 }
 
 func printEven(signalCh chan struct{}, wg *sync.WaitGroup, num int) {
